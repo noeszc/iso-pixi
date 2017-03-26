@@ -1,0 +1,1 @@
+template-es6
