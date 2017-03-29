@@ -11,7 +11,7 @@ export default class DrawIsoTile extends IsoObject {
   draw() {
     const size = this.size;
     this.clear();
-    this.beginFill(this.color, 0.8);
+    this.beginFill(this.color, 0.3);
     this.lineStyle(1, this.color, 1);
 
     this.moveTo(-size, 0);

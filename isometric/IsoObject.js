@@ -1,13 +1,16 @@
 import * as PIXI from 'pixi.js';
-import Coordianate from './Coordinate';
+import Coordinate from './Coordinate';
+import Rectangle from './Rectangle';
 import IsoUtils from './IsoUtils';
 
 export default class IsoObject extends PIXI.Graphics {
   constructor(size) {
     super();
     this._size = size;
-    this._position = new Coordianate();
-
+    this._position = new Coordinate();
+    this._vx = 0;
+    this._vy = 0;
+    this._vz = 0;
     this.updateScreenPosition();
   }
 
@@ -40,6 +43,25 @@ export default class IsoObject extends PIXI.Graphics {
   get z() {
     return this._position.z;
   }
+  set vx(value) {
+    this._vx = value;
+  }
+  get vx() {
+    return this._vx;
+  }
+  set vy(value) {
+    this._vy = value;
+  }
+  get vy() {
+    return this._vy;
+  }
+  set vz(value) {
+    this._vz = value;
+  }
+  get vz() {
+    return this._vz;
+  }
+
 
   set position(value){
     this._position = value;
@@ -69,6 +91,6 @@ export default class IsoObject extends PIXI.Graphics {
   }
 
   get rect(){
-    return new PIXI.Rectangle(this.x - this.size / 2, this.z - this.size / 2, this.size, this.size);
+    return new Rectangle(this.x - this.size / 2, this.z - this.size / 2, this.size, this.size);
   }
 }
