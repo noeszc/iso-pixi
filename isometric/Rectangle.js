@@ -178,6 +178,7 @@ export default class Rectangle {
     this.width = sourceRect.width;
     this.height = sourceRect.height;
   }
+
   setTo(xa, ya, widtha, heighta){
     his.x = xa;
     this.y = ya;

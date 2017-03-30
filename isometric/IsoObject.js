@@ -11,6 +11,7 @@ export default class IsoObject extends PIXI.Graphics {
     this._vx = 0;
     this._vy = 0;
     this._vz = 0;
+    this._walkable = false;
     this.updateScreenPosition();
   }
 
